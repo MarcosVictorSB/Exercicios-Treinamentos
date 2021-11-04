@@ -1,6 +1,6 @@
 import Divisible from '../01 - exercicios/multiplos'
 
-test('A soma dos numeros naturais abaixo de 10 divisivel por 3 ou 5', () => {
+test('Somar dos numeros naturais abaixo de 10 divisivel por 3 ou 5', () => {
     const expectedValue = 23
 
     const divible = new Divisible();
@@ -9,7 +9,7 @@ test('A soma dos numeros naturais abaixo de 10 divisivel por 3 ou 5', () => {
     expect(expectedValue).toEqual(result)
 })
 
-test('A soma dos numero naturais abaixo de 1000 divisivel por 3 ou 5', () => {
+test('Soma dos numero naturais abaixo de 1000 divisivel por 3 ou 5', () => {
     const expectedValue = 233168
 
     const divible = new Divisible();
@@ -17,3 +17,4 @@ test('A soma dos numero naturais abaixo de 1000 divisivel por 3 ou 5', () => {
 
     expect(expectedValue).toEqual(result)
 })
+
