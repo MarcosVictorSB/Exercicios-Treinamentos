@@ -19,7 +19,7 @@ test('Soma dos numeros naturais abaixo de 1000 divisivel por 3 ou 5', () => {
 })
 
 
-test('Soma dos numeros naturais abaixo de 1000 divisible por 3 e 5', () => {
+test('Soma dos numeros naturais abaixo de 1000 divisivel por 3 e 5', () => {
     const expectedValue = 33165
 
     const divible = new Divisible()
@@ -28,8 +28,8 @@ test('Soma dos numeros naturais abaixo de 1000 divisible por 3 e 5', () => {
     expect(expectedValue).toEqual(result)
 })
 
-test('Soma dos numeros naturais abaixo de 1000 divisible por (3 ou 5) e 7', () => {
-    const expectedValue = 0
+test('Soma dos numeros naturais abaixo de 1000 divisivel por (3 ou 5) e 7', () => {
+    const expectedValue = 33173
     
     const divisible = new Divisible()
     const result = divisible.sumNaturalNumbersDivisible3Or5and7Below(1000)

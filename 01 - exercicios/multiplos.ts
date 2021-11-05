@@ -22,4 +22,16 @@ export default class Divisible {
         
         return result 
     }
+
+    sumNaturalNumbersDivisible3Or5and7Below(value: number):number {
+        let result = 0
+        for(let i = 0; i < value; i++){
+            const divisible3Or5And7 = (i % 3 == 0 || i % 5 == 0) && i % 7 == 0
+            if(divisible3Or5And7){
+                result += i;
+            }
+        }
+        
+        return result 
+    }
 }
