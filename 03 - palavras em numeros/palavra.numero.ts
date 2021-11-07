@@ -1,5 +1,4 @@
 import { numberHappy } from "../02 - exercicios/numeros.felizes";
-// import {sumNaturalNumbersDivisible3Or5Below} from "../01 - exercicios/multiplos"
 
 const letras = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -35,4 +34,16 @@ export function isPrimeNumber(value: number): string {
 
 export function isDivisible3Or5(value: number): boolean {
     return value % 3 === 0 || value % 5 === 0
+}
+
+export function stringSentence(value: string): string {
+    
+    const sumNumberWord = valueWord(value)
+
+    const prime = isPrimeNumber(sumNumberWord)
+    const isHappyNumber = numberHappy(sumNumberWord)
+    const divisible3Or5 = isDivisible3Or5(sumNumberWord)
+    
+    return `${prime} - ${isHappyNumber} - ${divisible3Or5}`
+
 }

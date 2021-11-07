@@ -1,4 +1,5 @@
-import {valueWord, isPrimeNumber, numbersOfDividers, isDivisible3Or5} from '../03 - palavras em numeros/palavra.numero'
+import {valueWord, isPrimeNumber, numbersOfDividers, isDivisible3Or5, stringSentence} from '../03 - palavras em numeros/palavra.numero'
+
 
 describe('Valor de uma letra informanda', () => {
     test('Informando a letra "a" teria a resposta deve ser 1', () => {
@@ -134,8 +135,30 @@ describe('Multiplo de 3 ou 5', () => {
 })
 
 
-describe('Prima ou Não - Feliz ou Não - Multiplo de 3 ou 5', () => {
-    // test('infromando o numero 2 deve retornar "Primo - Não Feliz "')
+describe('Primo ou Não - Feliz ou Não - Multiplo de 3 ou 5', () => {
+    test('infromando a letra "b" deve retornar "Primo - Numero não é feliz - false"', () => {
+        const expectedValue =  'Primo - Numero não é feliz - false'
+
+        const result = stringSentence('b')
+
+        expect(expectedValue).toEqual(result)
+    })
+
+    test('infromando a letra "o" deve retornar "Primo - Numero não é feliz - true"', () => {
+        const expectedValue =  'Não primo - Numero não é feliz - true'
+
+        const result = stringSentence('o')
+
+        expect(expectedValue).toEqual(result)
+    })
+
+    test('Informando a palavra "marcos" deve retornar "Não primo - Numero não é feliz - true"', () => {
+        const expectedValue =  'Não primo - Numero não é feliz - true'
+
+        const result = stringSentence('marcos')
+
+        expect(expectedValue).toEqual(result)
+    })
 })
 
 
