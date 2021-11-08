@@ -1,10 +1,12 @@
 export class Produto {
     private nome: string
     private valor: number
+    private quantidade: number
 
-    constructor(nome: string, valor: number){
+    constructor(nome: string, valor: number, quantidade: number){
         this.nome = nome
         this.valor = valor
+        this.quantidade = quantidade
     }
 
     getNome(): string {
@@ -13,5 +15,9 @@ export class Produto {
 
     getValor(): number {
         return this.valor
+    }
+
+    getQuantidade(): number {
+        return this.quantidade
     }
 }

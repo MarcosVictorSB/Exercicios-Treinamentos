@@ -1,20 +1,16 @@
 import { Produto } from "./produto";
 import { Usuario } from "./usuario";
 
-export class Carrrinho {
+export class Carrinho {
 
-    private listaProdutos = [] as any
+    private listaProdutos: Produto[] 
 
     constructor(){
         this.listaProdutos = []
     }
 
-    add(produto: Produto, quantidade: number): string {
-        const carrinhoProduto: any = {
-            "produto": produto,
-            "quantidade": quantidade
-        }
-        this.listaProdutos.push(carrinhoProduto)
+    add(produto: Produto): string {
+        this.listaProdutos.push(produto)
         return `Produto adicionado no carrinho de compras`
     }
 
@@ -22,16 +18,19 @@ export class Carrrinho {
         return this.listaProdutos
     }
 
-    getValorProdutos(): number {
+    getValorTotalDaListaProdutos(): number {
+        return this.listaProdutos.reduce((acc, valor) => acc + (valor.getValor() *  valor.getQuantidade()), 0)
+    }
 
-        let valorFinal = 0
+    remover(produto: Produto): string {
         for (let i = 0; i < this.listaProdutos.length; i++) {
-            const quantidade = this.listaProdutos[i].quantidade
-            const valor = this.listaProdutos[i].valor
-            valorFinal +=  quantidade * valor
+            if(this.listaProdutos[i].getNome() === produto.getNome()){                    
+                
+                this.listaProdutos.splice(i, 1)
+            }
         }
-
-        return valorFinal
+        
+        return `Produto removido`
     }
 
     

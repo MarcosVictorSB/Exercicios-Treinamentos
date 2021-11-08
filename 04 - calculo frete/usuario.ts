@@ -1,11 +1,11 @@
-import { Carrrinho } from "./carrinho"
+import { Carrinho } from "./carrinho"
 
 export class Usuario {
     private nome: string
     private cep: number
-    private carrinho: Carrrinho
+    private carrinho: Carrinho
 
-    constructor(nome: string, enderenco: number, carrinho: Carrrinho){
+    constructor(nome: string, enderenco: number, carrinho: Carrinho){
         this.nome = nome
         this.cep = enderenco
         this.carrinho = carrinho
@@ -19,7 +19,7 @@ export class Usuario {
         return this.cep
     }
 
-    getCarrinho(): Carrrinho {
+    getCarrinho(): Carrinho {
         return this.carrinho
     }
 
