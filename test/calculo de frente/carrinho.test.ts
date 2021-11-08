@@ -1,6 +1,6 @@
-import { Produto } from "../04 - calculo frete/produto";
-import { Carrinho } from "../04 - calculo frete/carrinho"
-import { Usuario } from "../04 - calculo frete/usuario";
+import { Produto } from "../../04 - calculo frete/produto";
+import { Carrinho } from "../../04 - calculo frete/carrinho"
+import { Usuario } from "../../04 - calculo frete/usuario";
 
 test('Adicionar 2 teclados no valor de 75 reais em um carrinho de compras', () => {
     
