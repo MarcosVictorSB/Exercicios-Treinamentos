@@ -1,4 +1,4 @@
-import { Produto } from "../04 - calculo frete/produto";
+import { Produto } from "../../04 - calculo frete/produto";
 
 test('Retionando o nome, preço e quantidade de um produto recem criado', () => {
     

@@ -4,7 +4,13 @@ import IServicoCorreio  from "./IServicoCorreio"
 
 export default class ServicoCalculoFrete implements IServicoCorreio {
     
-    registrado(cep: number): number {
-        return 0
+    private servicoCorreio: IServicoCorreio
+    
+    constructor(servicoCorreio: IServicoCorreio){
+        this.servicoCorreio = servicoCorreio
+    }
+
+    registrado(cep: number): number{
+        return 35.50 // usará esse valor porque não ira consultar um api real
     }
 }

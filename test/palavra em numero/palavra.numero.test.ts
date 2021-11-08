@@ -1,4 +1,4 @@
-import {valueWord, isPrimeNumber, numbersOfDividers, isDivisible3Or5, stringSentence} from '../03 - palavras em numeros/palavra.numero'
+import {valueWord, isPrimeNumber, numbersOfDividers, isDivisible3Or5, stringSentence} from '../../03 - palavras em numeros/palavra.numero'
 
 
 describe('Valor de uma letra informanda', () => {

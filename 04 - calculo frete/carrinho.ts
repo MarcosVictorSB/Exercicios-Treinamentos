@@ -33,8 +33,4 @@ export class Carrinho {
         return `Produto removido`
     }
 
-    
-
-
-
 }

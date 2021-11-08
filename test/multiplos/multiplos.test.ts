@@ -1,4 +1,4 @@
-import Divisible from '../01 - exercicios/multiplos'
+import Divisible from '../../01 - exercicios/multiplos'
 
 test('Soma dos numeros naturais abaixo de 10 divisivel por 3 ou 5', () => {
     const expectedValue = 23

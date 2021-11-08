@@ -1,4 +1,4 @@
-import { numberHappy, numbersSplits, squareSumOfNumbers, thisNumberExistInArray} from '../02 - exercicios/numeros.felizes'
+import { numberHappy, numbersSplits, squareSumOfNumbers, thisNumberExistInArray} from '../../02 - exercicios/numeros.felizes'
 
 test('Quando verificar o numero 7 deve um retornar "Numero feliz"', () => {
     const expectedValue = 'Numero feliz'
