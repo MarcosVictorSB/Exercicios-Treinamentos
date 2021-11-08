@@ -3,7 +3,7 @@ import { Usuario } from "./usuario";
 
 export class Carrrinho {
 
-    listaProdutos = [] as any
+    private listaProdutos = [] as any
 
     constructor(){
         this.listaProdutos = []
@@ -17,4 +17,10 @@ export class Carrrinho {
         this.listaProdutos.push(carrinhoProduto)
         return `Produto adicionado no carrinho de compras`
     }
+
+    getlistaProdutos(): any{
+        return this.listaProdutos
+    }
+
+
 }
