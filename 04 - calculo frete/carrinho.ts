@@ -22,5 +22,20 @@ export class Carrrinho {
         return this.listaProdutos
     }
 
+    getValorProdutos(): number {
+
+        let valorFinal = 0
+        for (let i = 0; i < this.listaProdutos.length; i++) {
+            const quantidade = this.listaProdutos[i].quantidade
+            const valor = this.listaProdutos[i].valor
+            valorFinal +=  quantidade * valor
+        }
+
+        return valorFinal
+    }
+
+    
+
+
 
 }

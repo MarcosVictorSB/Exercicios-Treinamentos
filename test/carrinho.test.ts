@@ -39,3 +39,13 @@ test('Retornar a lista de produtos', () => {
     expect(expectedValue).toEqual(result)
 
 })
+
+test('Retornar o valor de um carrinho vazio', () => {
+    const expectedValue = 0
+
+    const carrinho = new Carrrinho()
+    const result = carrinho.getValorProdutos()
+
+    expect(expectedValue).toEqual(result)
+
+})

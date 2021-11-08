@@ -19,4 +19,8 @@ export class Usuario {
         return this.cep
     }
 
+    getCarrinho(): Carrrinho {
+        return this.carrinho
+    }
+
 }
