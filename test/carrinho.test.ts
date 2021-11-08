@@ -15,17 +15,3 @@ test('Adicionar 2 telcado no valor de 75 reais em um carrinho de compras', () =>
     expect(expectedValue).toEqual(result)
 
 })
-
-test('Adicionar para um "Usuario" um carinho de compra com "um" "mouse" no valor de "30 reais"', () => {
-    /*
-    const mouse = new Produto("mouse", 30)
-    const carrinho = new Carrrinho()
-    const quantidade = 1
-
-    carrinho.add(mouse, 1)
-    const marcos = new Usuario("marcos", 35430045)
-*/
-    
-
-
-})
