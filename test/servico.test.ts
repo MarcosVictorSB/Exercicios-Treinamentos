@@ -10,7 +10,7 @@ test('Criar o usuario marcos que comprou dois tecldo no valor de 130, com isso o
     const carrinhoMarcos = new Carrrinho()
     const marcos = new Usuario('marcos', 35430045, carrinhoMarcos)
     const produto = new Produto("telado", 130)
-    marcos.carrinho.add(produto, 2)
+    marcos.getCarrinho().add(produto, 2)
 
     const result = new Servico().valorFinal(marcos)
 
