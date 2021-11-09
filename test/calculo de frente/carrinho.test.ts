@@ -8,7 +8,8 @@ test('Adicionar 2 teclados no valor de 75 reais em um carrinho de compras', () =
 
 
     const teclado = new Produto("teclado", 75, 2)
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    const carrinho = new Carrinho(marcos)
     const result = carrinho.add(teclado)
 
     expect(expectedValue).toEqual(result)
@@ -23,8 +24,9 @@ test('Retornar a lista de produtos', () => {
 
     const teclado = new Produto("teclado", 75, 2)
     const monitor = new Produto("monitor", 65, 3)
+    const marcos = new Usuario('marcos', 35430045)
     
-    const carrinho = new Carrinho()
+    const carrinho = new Carrinho(marcos)
     
     carrinho.add(teclado)
     carrinho.add(monitor)
@@ -40,7 +42,9 @@ test('Retornar a lista de produtos', () => {
 test('Retornar o valor de um carrinho vazio', () => {
     const expectedValue = 0
 
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    const carrinho = new Carrinho(marcos)
+
     const result = carrinho.getValorTotalDaListaProdutos()
 
     expect(expectedValue).toEqual(result)
@@ -53,10 +57,12 @@ test('Retornar o valor final do carrinho de compras depois de adicionar dois pro
 
     const teclado = new Produto('teclado', 35, 2)
     const monitor = new Produto('monitor', 130, 2)
-
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    
+    const carrinho = new Carrinho(marcos)
     carrinho.add(teclado)
     carrinho.add(monitor)
+    
     const result = carrinho.getValorTotalDaListaProdutos()
 
     expect(expectedValue).toEqual(result)
@@ -65,12 +71,15 @@ test('Retornar o valor final do carrinho de compras depois de adicionar dois pro
 
 test('Retornar o valor final do carrinho de compras depois de adicionar o mesmo produto', () => {
     const expectedValue =  105
+    
     const teclado1 = new Produto('teclado', 35, 2)
     const teclado2 = new Produto('teclado', 35, 1)
-
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    const carrinho = new Carrinho(marcos)
+    
     carrinho.add(teclado1)
     carrinho.add(teclado2)
+    
     const result = carrinho.getValorTotalDaListaProdutos()
 
     expect(expectedValue).toEqual(result)
@@ -79,10 +88,12 @@ test('Retornar o valor final do carrinho de compras depois de adicionar o mesmo 
 
 test('Remover um produto do carrinho de compras', () => {
     const expectedValue =  'Produto removido'
+    
     const teclado = new Produto('teclado', 35, 2)
     const mouse = new Produto('mouse', 35, 1)
-
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    
+    const carrinho = new Carrinho(marcos)    
     carrinho.add(teclado)
     carrinho.add(mouse)
 
@@ -95,10 +106,12 @@ test('Remover um produto do carrinho de compras', () => {
 
 test('Remover um produto espefico do carrinho de compras', () => {
     const expectedValue =  [{'nome': 'mouse', 'valor': 35, 'quantidade': 1}]
+    
     const teclado = new Produto('teclado', 35, 2)
     const mouse = new Produto('mouse', 35, 1)
-
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    const carrinho = new Carrinho(marcos)
+    
     carrinho.add(teclado)
     carrinho.add(mouse)
 
@@ -111,10 +124,12 @@ test('Remover um produto espefico do carrinho de compras', () => {
 
 test('Remover todo os produtos do carrinho de compras', () => {
     const expectedValue =  0
+    
     const teclado = new Produto('teclado', 35, 2)
     const mouse = new Produto('mouse', 35, 1)
-
-    const carrinho = new Carrinho()
+    const marcos = new Usuario('marcos', 35430045)
+    
+    const carrinho = new Carrinho(marcos)
     carrinho.add(teclado)
     carrinho.add(mouse)
 
