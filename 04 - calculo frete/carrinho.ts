@@ -18,7 +18,7 @@ export class Carrinho {
 
     getlistaProdutos(): any{
         return this.listaProdutos
-    }
+    }    
 
     getValorTotalDaListaProdutos(): number {
         return this.listaProdutos.reduce((acc, valor) => acc + (valor.getValor() *  valor.getQuantidade()), 0)

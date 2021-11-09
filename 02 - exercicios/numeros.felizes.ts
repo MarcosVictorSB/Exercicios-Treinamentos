@@ -15,17 +15,6 @@ export function thisNumberExistInArray(value: number, arr: number[]) : boolean {
     return arr.some(number => number === value)
 }
 
-/*
-export function isNumberHappy(sum: number, arr: number[]): any {
-    if(sum !== 1){
-        const result = thisNumberExistInArray(sum, arr)  
-        arr.push(sum)
-        return result ? false : numberHappy(sum, arr)
-    }
-    
-    return true
-}
-*/
 export function numberHappy(value: number, arr: Array<number> = []): string {    
     
     let digits = numbersSplits(value)
