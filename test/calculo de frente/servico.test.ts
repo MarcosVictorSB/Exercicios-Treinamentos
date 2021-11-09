@@ -6,12 +6,12 @@ import { Usuario } from "../../04 - calculo frete/usuario"
 test('Retornar o valor do frente', () => {
     const expectedValue = 30
 
-    const servico = new ServicoCalculoFrete()
+    const servico = ServicoCalculoFrete.getInstancia()
     
     const marcos = new Usuario("marcos", 335430045)
     const carrinho = new Carrinho(marcos)
     
-    const resultado = servico.registrado(marcos.getCEP())
+    const resultado = servico.registrado(carrinho.usuario.getCEP())
 
     expect(expectedValue).toEqual(resultado)
 
@@ -32,7 +32,7 @@ test('Retonar o valor total do carrinho sem frete', () => {
     carrinho.add(mouse)
     carrinho.add(monitor)
 
-    const servico = new ServicoCalculoFrete()
+    const servico = ServicoCalculoFrete.getInstancia()
     const result = servico.valorTotal(carrinho)
 
     expect(expectedValue).toEqual(result)
@@ -49,7 +49,7 @@ test('Retonar o valor total do carrinho com frete', () => {
 
     
 
-    const servico = new ServicoCalculoFrete()
+    const servico = ServicoCalculoFrete.getInstancia()
     const result = servico.valorTotal(carrinho)
 
     expect(expectedValue).toEqual(result)
