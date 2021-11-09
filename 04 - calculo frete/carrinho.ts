@@ -4,9 +4,11 @@ import { Usuario } from "./usuario";
 export class Carrinho {
 
     private listaProdutos: Produto[] 
+    usuario: Usuario
 
-    constructor(){
+    constructor(usuario: Usuario){
         this.listaProdutos = []
+        this.usuario = usuario
     }
 
     add(produto: Produto): string {

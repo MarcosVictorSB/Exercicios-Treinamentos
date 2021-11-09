@@ -3,12 +3,10 @@ import { Carrinho } from "./carrinho"
 export class Usuario {
     private nome: string
     private cep: number
-    private carrinho: Carrinho
 
-    constructor(nome: string, enderenco: number, carrinho: Carrinho){
+    constructor(nome: string, enderenco: number){
         this.nome = nome
         this.cep = enderenco
-        this.carrinho = carrinho
     }
 
     getNome(): string {
@@ -17,10 +15,6 @@ export class Usuario {
 
     getCEP(): number{
         return this.cep
-    }
-
-    getCarrinho(): Carrinho {
-        return this.carrinho
     }
 
 }
