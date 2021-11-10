@@ -52,5 +52,3 @@ describe('Valor do carrinho com e sem frete', () => {
     })
 })
 
-
-

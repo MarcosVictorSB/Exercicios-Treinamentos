@@ -16,7 +16,7 @@ export class Carrinho {
         return `Produto adicionado no carrinho de compras`
     }
 
-    getlistaProdutos(): any{
+    getlistaProdutos(): Produto[]{
         return this.listaProdutos
     }    
 

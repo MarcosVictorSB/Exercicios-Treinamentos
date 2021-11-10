@@ -3,7 +3,6 @@ import { Carrinho } from "../../04 - calculo frete/carrinho"
 import { Usuario } from "../../04 - calculo frete/usuario";
 
 
-
 let usuario: Usuario
 let carrinho: Carrinho
 let teclado: Produto
