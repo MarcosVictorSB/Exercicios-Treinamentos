@@ -20,21 +20,31 @@ beforeEach(() => {
 
 describe('Adicionar produtos no carrinho', () => {   
 
-    test('Adicionar 2 teclados no valor de 75 reais em um carrinho de compras', () => {
+    test('Adicionar um produto no carrinho de compras', () => {
     
-        const expectedValue = 'Produto adicionado no carrinho de compras'         
+        const produtoExperado = [{nome: 'teclado', valor: 75, quantidade: 2}]
         
-        const result = carrinho.add(teclado)
+        carrinho.add(teclado)
 
+        expect(produtoExperado).toEqual(carrinho.getlistaProdutos())
+
+    
+    })
+
+    test('Adicionar o mesmo produto 2x no carrinho de compras', () => {
+    
+        const expectedValue = [{nome: 'teclado', valor: 75, quantidade: 4}]
+        
+        carrinho.add(teclado)
+        carrinho.add(teclado)
+
+        const result = carrinho.getlistaProdutos()
+    
         expect(expectedValue).toEqual(result)
     
     })
-})
 
-
-describe('Lista de produtos no carrinho', () => {
-
-    test('Retornar a lista de produtos', () => {
+    test('Adicionar 2 produtos diferente no carrinho de compra', () => {
     
         const expectedValue = [{nome: 'teclado', valor: 75, quantidade: 2}, {nome: 'monitor', valor: 65, quantidade: 3}]
         
@@ -49,8 +59,8 @@ describe('Lista de produtos no carrinho', () => {
 })
 
 
-describe('Retornar o valor final do carrinho', () => {
-    test('Retornar o valor de um carrinho vazio', () => {
+describe('Valor final do carrinho', () => {
+    test('O valor de um carrinho vazio deve ser 0', () => {
         
         const expectedValue = 0
     
@@ -60,7 +70,7 @@ describe('Retornar o valor final do carrinho', () => {
     
     })
     
-    test('Retornar o valor final do carrinho de compras depois de adicionar dois produtos', () => {
+    test('O valor final de um carrinho de compra que possui teclado e monitor deve ser igual a 345', () => {
         const expectedValue =  345 
 
         carrinho.add(teclado)
@@ -71,7 +81,7 @@ describe('Retornar o valor final do carrinho', () => {
     
     })
     
-    test('Retornar o valor final do carrinho de compras depois de adicionar o mesmo produto', () => {
+    test('O valor final de um carrinho de compra que possui 2 teclados deve ser igual a 300', () => {
         const expectedValue =  300
         
         carrinho.add(teclado)

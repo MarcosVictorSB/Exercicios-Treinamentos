@@ -40,15 +40,18 @@ describe('Valor do carrinho com e sem frete', () => {
         const result = servico.valorTotal(carrinho)
     
         expect(expectedValue).toEqual(result)
+        
     })
     
     test('Retonar o valor total do carrinho com frete', () => {
         const expectedValue = 80
 
-        carrinho.add(produto)        
+        carrinho.getValorTotalDaListaProdutos = jest.fn().mockReturnValue(50)        
         const result = servico.valorTotal(carrinho)
     
         expect(expectedValue).toEqual(result)
+        expect(carrinho.getValorTotalDaListaProdutos).toHaveBeenCalledTimes(1)
     })
 })
+
 
