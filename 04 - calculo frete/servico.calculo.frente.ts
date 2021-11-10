@@ -23,7 +23,7 @@ export default class ServicoCalculoFrete implements IServicoCorreio {
 
     valorTotal(carrinho: Carrinho): number {
         const valorTotalDaListaProdutos = carrinho.getValorTotalDaListaProdutos()
-        const possuiFrete = carrinho.getValorTotalDaListaProdutos() <= this.valorMininoParaCobraFrete
+        const possuiFrete = valorTotalDaListaProdutos <= this.valorMininoParaCobraFrete
         
         if(possuiFrete){
             const valorDoFrete = this.registrado(carrinho.usuario.getCEP())

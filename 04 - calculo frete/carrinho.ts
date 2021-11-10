@@ -11,9 +11,23 @@ export class Carrinho {
         this.usuario = usuario
     }
 
-    add(produto: Produto): string {
-        this.listaProdutos.push(produto)
-        return `Produto adicionado no carrinho de compras`
+    add(produto: Produto): void {
+        const carrinhoVazio = this.listaProdutos.length === 0
+        if(carrinhoVazio){
+            this.listaProdutos.push(produto)
+            return
+        }
+
+        const index = this.listaProdutos.indexOf(produto)
+        if(index === -1){
+            this.listaProdutos.push(produto)
+            return
+        }
+        
+        this.listaProdutos[index].setQuantidade(produto.getQuantidade())
+        return
+        
+            
     }
 
     getlistaProdutos(): Produto[]{

@@ -17,7 +17,15 @@ export class Produto {
         return this.valor
     }
 
+    setValor(valor: number): void {
+        this.valor += valor
+    }
+
     getQuantidade(): number {
         return this.quantidade
+    }
+
+    setQuantidade(quantidade: number): void {
+        this.quantidade += quantidade
     }
 }

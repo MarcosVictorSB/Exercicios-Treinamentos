@@ -5,14 +5,19 @@ import { Usuario } from "../../04 - calculo frete/usuario"
 
 let usuario: Usuario
 let carrinho: Carrinho
-let produto: Produto
+let teclado: Produto
+let mouse: Produto
+let monitor: Produto
 let servico: ServicoCalculoFrete
 
 beforeEach(() => {
     servico = ServicoCalculoFrete.getInstancia()
     usuario = new Usuario("marcos", 335430045)
     carrinho = new Carrinho(usuario)
-    produto = new Produto('teclado', 25, 2)
+    
+    teclado = new Produto('teclado', 25, 2)
+    mouse = new Produto('mouse', 25, 2)
+    monitor = new Produto('monitor', 25, 2)
 })
 
 
@@ -30,13 +35,13 @@ describe('Valor do frete', () => {
 
 
 describe('Valor do carrinho com e sem frete', () => {
-    test('Retonar o valor total do carrinho sem frete', () => {
+    test.only('Retonar o valor total do carrinho sem frete', () => {
     
         const expectedValue = 150
         
-        carrinho.add(produto)
-        carrinho.add(produto)
-        carrinho.add(produto)
+        carrinho.add(teclado)
+        carrinho.add(mouse)
+        carrinho.add(monitor)
         const result = servico.valorTotal(carrinho)
     
         expect(expectedValue).toEqual(result)
