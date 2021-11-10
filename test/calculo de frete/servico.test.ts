@@ -35,7 +35,7 @@ describe('Valor do frete', () => {
 
 
 describe('Valor do carrinho com e sem frete', () => {
-    test.only('Retonar o valor total do carrinho sem frete', () => {
+    test('Retonar o valor total do carrinho sem frete', () => {
     
         const expectedValue = 150
         
