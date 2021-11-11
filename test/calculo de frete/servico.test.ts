@@ -57,6 +57,27 @@ describe('Valor do carrinho com e sem frete', () => {
         expect(expectedValue).toEqual(result)
         expect(carrinho.getValorTotalDaListaProdutos).toHaveBeenCalledTimes(1)
     })
+
+    test('O carrinho sem frete não deve chamar a função para registrar o valor do frete', () => {
+        
+        carrinho.add(teclado)
+        carrinho.add(mouse)
+        carrinho.add(monitor)
+        servico.valorTotal(carrinho)
+
+        servico.registrado = jest.fn()
+        expect(servico.registrado).not.toHaveBeenCalled()
+    })
+
+    test('O carrinho com frete deve chamar a função para registrar o valor do frete', () => {
+        
+        carrinho.add(teclado)
+        servico.registrado = jest.fn()
+
+        servico.valorTotal(carrinho)
+        
+        expect(servico.registrado).toHaveBeenCalled()
+    })
 })
 
 
